@@ -18,6 +18,11 @@ class ButtonChangeEvent {
   ButtonChangeEvent(this.buttonTypes);
 }
 
+class KeyBordChangeEvent{
+  bool visible;
+  KeyBordChangeEvent(this.visible);
+}
+
 class QuillEditor extends StatefulWidget {
   final String value;
   final double height;
@@ -35,7 +40,7 @@ class QuillEditor extends StatefulWidget {
 
 EventBus eventBus;
 
-class QuillEditorState extends State<QuillEditor> with WidgetsBindingObserver {
+class QuillEditorState extends State<QuillEditor> {
   WebViewPlusController _controller;
   String text = "";
   final Key _mapKey = UniqueKey();
@@ -45,20 +50,23 @@ class QuillEditorState extends State<QuillEditor> with WidgetsBindingObserver {
   var _selectionIndex = 0;
   GlobalKey _key = GlobalKey();
   var lastPostion = 0;
-  bool isShowKeyBord = false;
-
+  KeyboardVisibilityNotification _keyboardVisibility = new KeyboardVisibilityNotification();
+  int _keyboardVisibilitySubscriberId;
+  bool _keyboardState = false;
+  final picker = ImagePicker();
   @override
   void initState() {
     eventBus = EventBus();
-    KeyboardVisibilityNotification().addNewListener(
-      onChange: (bool visible) async {
-        print(visible);
-//        if (mounted)
-//          setState(() {
-//            isShowKeyBord = visible;
-//          });
+    _keyboardState = _keyboardVisibility.isKeyboardVisible;
+    _keyboardVisibilitySubscriberId = _keyboardVisibility.addNewListener(
+      onChange: (bool visible){
+       if(mounted){
+         setState(() {
+           _keyboardState = visible;
+         });
+       }
         if (visible) {
-//          Future.delayed(Duration(milliseconds: 500),()async{
+          Future.delayed(Duration.zero,()async{
           var a = await _controller.evaluateJavascript("quill.getSelection()");
           print('显示键盘-getSelection：$a');
           var split = a.split(';');
@@ -74,29 +82,11 @@ class QuillEditorState extends State<QuillEditor> with WidgetsBindingObserver {
           if (tt >= d) {
             _controller.evaluateJavascript("quill.scrollingContainer.scrollTop = $tt");
           }
-//          });
+          });
         }
       },
     );
     super.initState();
-    //初始化
-    WidgetsBinding.instance.addObserver(this);
-  }
-
-  @override
-  void didChangeMetrics() {
-    super.didChangeMetrics();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      setState(() {
-        var bottom2 = MediaQuery.of(context).viewInsets.bottom;
-        if (bottom2 == 0) {
-          //关闭键盘
-        } else {
-          //显示键盘
-
-        }
-      });
-    });
   }
 
   @override
@@ -104,7 +94,7 @@ class QuillEditorState extends State<QuillEditor> with WidgetsBindingObserver {
     if (_controller != null) {
       _controller = null;
     }
-    WidgetsBinding.instance.removeObserver(this);
+    _keyboardVisibility.removeListener(_keyboardVisibilitySubscriberId);
     super.dispose();
   }
 
@@ -146,16 +136,18 @@ class QuillEditorState extends State<QuillEditor> with WidgetsBindingObserver {
               onPageFinished: (String url) {
                 setEditorChangeListener();
                 setSelectionListener();
+                _controller.evaluateJavascript("quill.focus()");
               },
             ),
           ),
-          _controller!=null
-              ? ToolBar(
-                  key: _key,
-                  webViewPlusController: _controller,
-                  onButtonTap: (toolBarButton) => _buttonPressed(toolBarButton),
-                )
-              : Container(),
+          Offstage(
+            offstage: !_keyboardState,
+            child: ToolBar(
+              key: _key,
+              webViewPlusController: _controller,
+              onButtonTap: (toolBarButton) => _buttonPressed(toolBarButton),
+            ),
+          ),
           Padding(padding: EdgeInsets.only(bottom: MediaQuery
               .of(context)
               .padding
@@ -165,7 +157,7 @@ class QuillEditorState extends State<QuillEditor> with WidgetsBindingObserver {
     );
   }
 
-  _buttonPressed(ToolBarButton toolBarButton) {
+  _buttonPressed(ToolBarButton toolBarButton) async{
     switch (toolBarButton.buttonType) {
       case ButtonType.BOLD:
         var isSelect = toolBarButton.isSelect;
@@ -207,7 +199,12 @@ class QuillEditorState extends State<QuillEditor> with WidgetsBindingObserver {
         });
         break;
       case ButtonType.IMAGE:
-        _controller.evaluateJavascript("insertImage('$base64')");
+        var a = await _controller.evaluateJavascript("quill.getSelection()");
+        print('显示键盘-getSelection：$a');
+        var split = a.split(';');
+        var split2 = split[0].split('=');
+        var split22 = int.parse(split2[1]);
+        _controller.evaluateJavascript("insertImage('$base64',$split22)");
         break;
       case ButtonType.BLOCK_QUOTE:
         var isSelect = toolBarButton.isSelect;
@@ -279,7 +276,7 @@ class QuillEditorState extends State<QuillEditor> with WidgetsBindingObserver {
             var split2 = split[0].split('=');
             var split22 = int.parse(split2[1]);
             lastPostion = split22;
-            print('ccc:${split22}');
+//            print('ccc:${split22}');
           }
 //              var s = await _controller.evaluateJavascript("quill.getBounds($split22)");
 //              var split3 = s.split(';');
@@ -340,7 +337,8 @@ class QuillEditorState extends State<QuillEditor> with WidgetsBindingObserver {
   }
 
   //选择图片
-  _picImage() {
+  _picImage() async{
+    final pickedFile = await picker.getImage(source: ImageSource.camera);
     insertImage();
   }
 
