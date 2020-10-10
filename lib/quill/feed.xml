@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://quilljs.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://quilljs.com/" rel="alternate" type="text/html" /><updated>2020-04-14T22:43:32-07:00</updated><id>https://quilljs.com/feed.xml</id><title type="html">Quill - Your powerful rich text editor</title><subtitle>Quill is a free, open source WYSIWYG editor built for the modern web. Completely customize it for any need with its modular architecture and expressive API.</subtitle><entry><title type="html">Announcing Quill 1.0</title><link href="https://quilljs.com/blog/announcing-quill-1-0/" rel="alternate" type="text/html" title="Announcing Quill 1.0" /><published>2016-09-06T00:00:00-07:00</published><updated>2016-09-06T00:00:00-07:00</updated><id>https://quilljs.com/blog/accouncing-quill-1-0</id><content type="html" xml:base="https://quilljs.com/blog/announcing-quill-1-0/">&lt;p&gt;Quill 1.0 has arrived. It was just two years ago that Quill made its public debut as an open source project. Today, it can be found in applications and products of all sizes, ranging from personal projects and promising startups, to established public companies.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Quill is designed as an easy to use editor, to support content creation across the web.&lt;/strong&gt; It is built on top of consistent and predictable constructs, exposed through a powerful &lt;a href=&quot;/docs/api/&quot;&gt;API&lt;/a&gt;. With coverage across both ends of the complexity spectrum, Quill aims to be the defacto rich text editor for the web.&lt;/p&gt;
+
+&lt;p&gt;In the 111 releases, Quill has iterated relentlessly towards this goal. It has stabilized its API, moved essential internal implementations into customizable modules, and exposed its document model for users to define and add entirely new formats and content.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/announcing-quill-1-0/#new-features&quot;&gt;New Features&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/announcing-quill-1-0/#parchment&quot;&gt;Parchment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/announcing-quill-1-0/#website&quot;&gt;Website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/announcing-quill-1-0/#whats-next&quot;&gt;What’s Next&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/announcing-quill-1-0/#getting-started&quot;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/announcing-quill-1-0/#credits&quot;&gt;Credits&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;new-features&quot;&gt;New Features&lt;/h3&gt;
+
+&lt;p&gt;Editable &lt;a href=&quot;/docs/modules/syntax/&quot;&gt;Syntax Highlighted Code&lt;/a&gt; blocks can now seamlessly exist inline with the rest of your text.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/syntax.png&quot; alt=&quot;Syntax Highlighted Code&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Beautifully rendered &lt;a href=&quot;/docs/modules/formula/&quot;&gt;LaTeX formulas&lt;/a&gt; can be inserted to your contents.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/formula.png&quot; alt=&quot;Formula&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Many, many new formats&lt;/strong&gt; have been added, including superscript, subscript, inline code, code blocks, headers, blockquotes, text direction, videos, and nested lists. Inline styles can now also use classes &lt;a href=&quot;/playground/#class-vs-inline-style&quot;&gt;instead&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;An entirely new theme &lt;a href=&quot;/docs/themes/#bubble&quot;&gt;Bubble&lt;/a&gt; has also been added, based on a floating toolbar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/bubble.png&quot; alt=&quot;Bubble Theme&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Take a look at the &lt;a href=&quot;https://github.com/quilljs/quill/blob/develop/CHANGELOG.md&quot;&gt;Changelog&lt;/a&gt; to see an exhaustive list.&lt;/p&gt;
+
+&lt;h3 id=&quot;parchment&quot;&gt;Parchment&lt;/h3&gt;
+
+&lt;p&gt;As the biggest feature in Quill 1.0, &lt;a href=&quot;https://github.com/quilljs/parchment/&quot;&gt;Parchment&lt;/a&gt; deserves its own mention. It offers a powerful abstraction over the DOM to enable custom formats and content in Quill. It is responsible for the numerous new formats added in Quill 1.0, including videos, syntax highlighted code, and formulas.&lt;/p&gt;
+
+&lt;p&gt;With Parchment, you can now enhance or customize existing Quill formats or add entirely new ones in your own application. Take a look at &lt;a href=&quot;/guides/cloning-medium-with-parchment/&quot;&gt;Cloning Medium with Parchment&lt;/a&gt; for a detailed guide.&lt;/p&gt;
+
+&lt;h3 id=&quot;website&quot;&gt;Website&lt;/h3&gt;
+
+&lt;p&gt;In addition to the fancy new features, Quill’s documentation site has also been given an upgrade. The &lt;a href=&quot;/docs/&quot;&gt;referential&lt;/a&gt; portions have all been filled out, with no more incomplete or unstable pages. A new &lt;a href=&quot;/guides/&quot;&gt;Guides&lt;/a&gt; section has been added to cover some of the common how-tos and whys behind design decisions.&lt;/p&gt;
+
+&lt;p&gt;There is now also an &lt;a href=&quot;/playground/&quot;&gt;Interactive Playground&lt;/a&gt;, for tinkerers and immediate gratification. You can use it try out Quill’s features and experiment with its API, without any setup or installation.&lt;/p&gt;
+
+&lt;h3 id=&quot;whats-next&quot;&gt;What’s Next&lt;/h3&gt;
+
+&lt;p&gt;Quill will continue to refine itself in being the easiest editor to use, while allowing for the most sophisticated customizations. With a stable and solid foundation on 1.0, some areas of focus will include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Iterating on modules and themes, making them easier to create, customize and share&lt;/li&gt;
+  &lt;li&gt;Add remaining common formats, such as tables&lt;/li&gt;
+  &lt;li&gt;Better internationalization support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;If you are just joining us today, the example editors on the &lt;a href=&quot;/&quot;&gt;homepage&lt;/a&gt; are an excellent demonstration of the gorgeous editing experiences you can add to your application. Make sure to open up your developer console to play around with the API.&lt;/p&gt;
+
+&lt;p&gt;Head to the &lt;a href=&quot;/playground/&quot;&gt;Interactive Playground&lt;/a&gt; if you want to tinker some more or to the &lt;a href=&quot;/docs/quickstart/&quot;&gt;Quickstart&lt;/a&gt; docs if you are ready to add Quill, with just a few lines of code.&lt;/p&gt;
+
+&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
+
+&lt;p&gt;Last, but not least, &lt;strong&gt;a special thank you goes out to Quill’s community.&lt;/strong&gt; Whether you contributed code for the codebase, help for other community members, reports or context for bugs, ideas for new features or improve existing ones, feedback on use cases, or evangelism for the project, Quill would not be nearly as successful without your collective efforts. Thank you for your contribution!&lt;/p&gt;</content><author><name></name></author><summary type="html">Quill 1.0 has arrived. It was just two years ago that Quill made its public debut as an open source project. Today, it can be found in applications and products of all sizes, ranging from personal projects and promising startups, to established public companies.</summary></entry><entry><title type="html">Quill 1.0 Release Candidate… Released!</title><link href="https://quilljs.com/blog/quill-1-0-release-candidate-released/" rel="alternate" type="text/html" title="Quill 1.0 Release Candidate... Released!" /><published>2016-08-18T00:00:00-07:00</published><updated>2016-08-18T00:00:00-07:00</updated><id>https://quilljs.com/blog/quill-1-0-release-candidate-released</id><content type="html" xml:base="https://quilljs.com/blog/quill-1-0-release-candidate-released/">&lt;p&gt;Today Quill enters its highly anticipated 1.0 release candidacy. Through the 11 beta releases, over 300 reported bugs were fixed, and almost 1000 commits were made. &lt;strong&gt;Thank you to all contributors who pitched in, in ways small and large, isolated and numerous, either reporting issues, committing code, or otherwise helping out the community!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;/docs/api/&quot;&gt;API&lt;/a&gt; should now be considered stable, with only backwards compatible bug fixes to look forward to. No additional new features are planned until after the official 1.0 release.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;You can now access the release candidate from npm:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install quill@1.0.0-rc.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As always our CDN is also available:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdn.quilljs.com/1.0.0-rc.0/quill.snow.css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdn.quilljs.com/1.0.0-rc.0/quill.bubble.css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdn.quilljs.com/1.0.0-rc.0/quill.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdn.quilljs.com/1.0.0-rc.0/quill.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you are just joining from the 0.20.1 or older, take a look at the updated &lt;a href=&quot;/guides/upgrading-to-1-0/&quot;&gt;Upgrading to 1.0 Guide&lt;/a&gt;. If you prefer to stay with 0.20, the &lt;a href=&quot;/0.20/&quot;&gt;documentation&lt;/a&gt; will remain available.&lt;/p&gt;
+
+&lt;h3 id=&quot;many-new-formats&quot;&gt;Many New Formats&lt;/h3&gt;
+
+&lt;p&gt;Quill 1.0 adds several new formats and improves on existing ones. Superscript, subscript, inline code and blocks, headers, blockquotes, text direction, and video support have all been added. List can also now be nested and formats previously implemented with just inline styles can now use classes &lt;a href=&quot;/playground/#class-vs-inline-style&quot;&gt;instead&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Syntax highlighted &lt;a href=&quot;/docs/modules/syntax/&quot;&gt;code&lt;/a&gt; and LaTeX &lt;a href=&quot;/docs/modules/formula/&quot;&gt;formulas&lt;/a&gt; can also be added with an optional module.&lt;/p&gt;
+
+&lt;h3 id=&quot;brand-new-theme&quot;&gt;Brand New Theme&lt;/h3&gt;
+
+&lt;p&gt;An entirely new theme &lt;a href=&quot;/docs/themes/#bubble&quot;&gt;Bubble&lt;/a&gt; has also been added, based on a floating toolbar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/bubble.png&quot; alt=&quot;Color Icon&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Both Snow and Bubble now also use SVG icons to sharply scale to whatever size your application demands. The icons are implemented to be added to the DOM directly so you can customize the active color and enable less obvious UI enhancements.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/color.png&quot; alt=&quot;Color Icon&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;more-configurable-modules&quot;&gt;More Configurable Modules&lt;/h3&gt;
+
+&lt;p&gt;Existing modules have much more customization capabilities in 1.0, with new configurations and APIs. Most notably:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/docs/modules/clipboard/&quot;&gt;Clipboard&lt;/a&gt; introduces the ability to customize interpretation of pasted content before it reaches the editor.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/docs/modules/keyboard/&quot;&gt;Keyboard&lt;/a&gt; adds a context option to give much more granular control over when bindings are triggered.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/docs/modules/toolbar/&quot;&gt;Toolbar&lt;/a&gt; can be much more easily configured with just an array, and now exposes options to overwrite its handler.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;parchment&quot;&gt;Parchment&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/quilljs/parchment/&quot;&gt;Parchment&lt;/a&gt; also enters its 1.0 release candidacy today. For Quill, not only did Parchment enable the addition the numerous formats, it enables a path to the new generation of content creation. Text today is written to be rendered on the web, offering a much richer canvas than a printed piece of paper. Content can now be live, interactive, or even collaborative.&lt;/p&gt;
+
+&lt;p&gt;Users have already been using Quill in beta to successfully support these editing experiences. This is possible in part due to the &lt;a href=&quot;/docs/api/&quot;&gt;API&lt;/a&gt; Quill was designed with at inception, but now Parchment takes that further by providing a powerful abstraction layer over the DOM. This enables the addition of new content and formats that cannot exist on paper or even anticipated by Quill’s developers.&lt;/p&gt;
+
+&lt;p&gt;Of course, Quill still ships with ready to go defaults, so you can integrate and use it with just a few lines of code—you never have to do more if your product needs never demands it.&lt;/p&gt;
+
+&lt;p&gt;Jump to the &lt;a href=&quot;/&quot;&gt;demo&lt;/a&gt; to see Quill’s new features or try out some code in the &lt;a href=&quot;/playground/&quot;&gt;Interactive Playground&lt;/a&gt;!&lt;/p&gt;</content><author><name></name></author><summary type="html">Today Quill enters its highly anticipated 1.0 release candidacy. Through the 11 beta releases, over 300 reported bugs were fixed, and almost 1000 commits were made. Thank you to all contributors who pitched in, in ways small and large, isolated and numerous, either reporting issues, committing code, or otherwise helping out the community!</summary></entry><entry><title type="html">Quill 1.0 Beta Release</title><link href="https://quilljs.com/blog/quill-1-0-beta-release/" rel="alternate" type="text/html" title="Quill 1.0 Beta Release" /><published>2016-05-03T00:00:00-07:00</published><updated>2016-05-03T00:00:00-07:00</updated><id>https://quilljs.com/blog/quill-1-0-beta-release</id><content type="html" xml:base="https://quilljs.com/blog/quill-1-0-beta-release/">&lt;p&gt;Today Quill is ready for its first beta preview of 1.0. This is the biggest rewrite to Quill since its inception and enables many new possibilities not available in previous versions of Quill, nor any other editor. The code is as always available on Github and through npm:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install quill@1.0.0-beta.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The skeleton of a new documentation site is also being built out at &lt;a href=&quot;https://beta.quilljs.com&quot;&gt;beta.quilljs.com&lt;/a&gt;. Whereas the current site focuses on being a referential resource, the new site will also be a guide to provide insight on approaching different customization goals. There is also an &lt;a href=&quot;https://beta.quilljs.com/playground/&quot;&gt;interactive playground&lt;/a&gt; to try out various configurations and explore the API.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;The goal now is of course an official 1.0 release. To get there, Quill will now enter a weekly cadence of beta releases, so you can expect rapid interations on stability and bug fixes each week. Github is still the center of all development so please do report &lt;a href=&quot;https://github.com/quilljs/quill/issues&quot;&gt;Issues&lt;/a&gt; as you encounter them in the beta preview.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today Quill is ready for its first beta preview of 1.0. This is the biggest rewrite to Quill since its inception and enables many new possibilities not available in previous versions of Quill, nor any other editor. The code is as always available on Github and through npm:</summary></entry><entry><title type="html">Are We There Yet (to 1.0)?</title><link href="https://quilljs.com/blog/are-we-there-yet-to-1-0/" rel="alternate" type="text/html" title="Are We There Yet (to 1.0)?" /><published>2016-03-14T00:00:00-07:00</published><updated>2016-03-14T00:00:00-07:00</updated><id>https://quilljs.com/blog/are-we-there-yet-to-1-0</id><content type="html" xml:base="https://quilljs.com/blog/are-we-there-yet-to-1-0/">&lt;p&gt;When Quill laid out its &lt;a href=&quot;/blog/the-road-to-1-0/&quot;&gt;1.0 roadmap&lt;/a&gt;, core to its journey was the development of a new document model called Parchment. Today a beta release of Parchment is being made available on &lt;a href=&quot;https://github.com/quilljs/parchment&quot;&gt;Github&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/parchment&quot;&gt;NPM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What this means is its design and API is reasonably stable and the adventurous can now take an early look. The latest Quill source is already using Parchment to implement its formatting and content capabilities, and its &lt;a href=&quot;https://github.com/quilljs/quill/tree/develop/formats&quot;&gt;integration&lt;/a&gt; would be a helpful example of Parchment in action. Of course, this is in addition to Parchment’s own &lt;a href=&quot;https://github.com/quilljs/parchment/blob/master/README.md&quot;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;new-formats&quot;&gt;New Formats&lt;/h3&gt;
+
+&lt;p&gt;Parchment enables Quill to scalably support many formats and many are being added in 1.0. The list includes headers, blockquotes, code, superscript, subscript, text direction, nested lists, and video embeds. Syntax highlighted code and formulas will also be available through externally supported modules. In addition, formats that previously relied on style attributes are reimplemented to optionally use classes instead. By default, fonts, sizes, and text alignment will use classes, while foreground and background colors will still use style attributes, since there are so many possible color values.&lt;/p&gt;
+
+&lt;h3 id=&quot;quill-10-beta&quot;&gt;Quill 1.0 Beta&lt;/h3&gt;
+
+&lt;p&gt;With Parchment out of the way, Quill is nearing its own 1.0 release. This will also be prefaced with a beta period, optimistically planned for early April. You can also set up the &lt;a href=&quot;https://github.com/quilljs/quill/blob/develop/.github/CONTRIBUTING.md#local-development&quot;&gt;local development&lt;/a&gt; environment to follow along with the latest changes and progress.&lt;/p&gt;
+
+&lt;p&gt;If you are currently using Quill at your company or project, we’d love to hear about your use case &lt;a href=&quot;mailto:hello@quilljs.com&quot;&gt;hello@quilljs.com&lt;/a&gt;!&lt;/p&gt;</content><author><name></name></author><summary type="html">When Quill laid out its 1.0 roadmap, core to its journey was the development of a new document model called Parchment. Today a beta release of Parchment is being made available on Github and NPM.</summary></entry><entry><title type="html">The Road to 1.0</title><link href="https://quilljs.com/blog/the-road-to-1-0/" rel="alternate" type="text/html" title="The Road to 1.0" /><published>2015-09-15T00:00:00-07:00</published><updated>2015-09-15T00:00:00-07:00</updated><id>https://quilljs.com/blog/the-road-to-1-0</id><content type="html" xml:base="https://quilljs.com/blog/the-road-to-1-0/">&lt;p&gt;Quill launched with the ambitious goal of becoming &lt;em&gt;the&lt;/em&gt; rich text editor for the web, being both easy to use for drop in use cases, and powerful enough for complex ones. Its current &lt;a href=&quot;/docs/api/&quot;&gt;API&lt;/a&gt; is core to those goals.&lt;/p&gt;
+
+&lt;p&gt;In the past months, much effort has been placed into providing even greater means for customization, particularly the editor’s contents. With this nearing completion, Quill is approaching its 1.0 coming of age.&lt;/p&gt;
+
+&lt;h3 id=&quot;parchment&quot;&gt;Parchment&lt;/h3&gt;
+
+&lt;p&gt;A full introduction and guide to Parchment is still forthcoming, but in short it is a new document model for Quill. An editor’s document model is an important abstraction over the DOM that allows the editor and API users to reason about its contents through a much simpler yet more expressive interface than directly interacting with the browser. For Quill, this enables an elegant solution to the longstanding problem of format customization.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Prior to Parchment, Quill required near complete control over its editor container and descendant DOM nodes in order to provide its precise retrieval and manipulation API. Even simple modifications such as changing the default link open behavior required hacks and defining new content types, such as syntax highlighted code, was impossible.&lt;/p&gt;
+
+&lt;p&gt;Parchment hands control of entire subtrees back to the user, allowing the definition of new nodes or overwriting existing ones. The requirement is that certain methods such as &lt;code class=&quot;highlighter-rouge&quot;&gt;getValue&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;getFormat&lt;/code&gt; be defined in order to happily exist within a Parchment document. Those familiar will find this very similar to &lt;code class=&quot;highlighter-rouge&quot;&gt;render&lt;/code&gt; and Components in &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;, a significant influencer of Parchment’s design.&lt;/p&gt;
+
+&lt;p&gt;While the Parchment interface is still being stabilized, a preview of a definition for a &lt;a href=&quot;https://github.com/Khan/KaTeX&quot;&gt;KaTeX&lt;/a&gt; equation looks like this (with ES6 syntax):&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Equation&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Parchment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Embed&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;domNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'contenteditable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;katex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;domNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;getValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;Quill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;registerFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Equation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The current priority is to integrate Parchment into Quill as its new document model. However, Parchment is and will remain organized as its own &lt;a href=&quot;https://github.com/quilljs/parchment&quot;&gt;repository&lt;/a&gt;, as it was designed as a general purpose tool. Hopefully one day it may serve as the document model for other editors as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;formats&quot;&gt;Formats&lt;/h3&gt;
+
+&lt;p&gt;Parchment opens the doors to scalably support many more formats, many of which will be included in the 1.0 release. The complete list is not ready for announcement but they will at least include semantic headers and nested lists. Equations and syntax highlighted code will also be added as separate repositories because of their likely dependency on external libraries.&lt;/p&gt;
+
+&lt;h3 id=&quot;modules&quot;&gt;Modules&lt;/h3&gt;
+
+&lt;p&gt;Quill organizes most of its source code as modules to make it easy to overwrite their default behavior. Unfortunately a documentation gap currently exists for these modules–this will have to be filled for their extensibility to be realized.&lt;/p&gt;
+
+&lt;p&gt;Some non-essential modules will also be moved out into their own repositories. Custom builds are planned to conveniently include or exclude these modules, along with other permutations, though this may land post 1.0 depending on timing.&lt;/p&gt;
+
+&lt;h3 id=&quot;beyond-10&quot;&gt;Beyond 1.0&lt;/h3&gt;
+
+&lt;p&gt;With Quill 1.0, the main foundations will be complete and much more emphasis will be placed into building examples and enhancing support, with internationalization, accessibility, and cross application interactions (copy/paste) as main focus points.&lt;/p&gt;
+
+&lt;p&gt;In addition, Quill’s UI is due for an upgrade. While the aesthetics of Quill is already completely customizable, more numerous defaults could be available for those wanting a drop in solution. Here’s a sneak peak at a couple of upcoming themes in the works:&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;img class=&quot;road-1-theme-preview&quot; src=&quot;/assets/images/blog/theme-1.png&quot; alt=&quot;Quill Theme 1&quot; /&gt;
+  &lt;img class=&quot;road-1-theme-preview&quot; src=&quot;/assets/images/blog/theme-2.png&quot; alt=&quot;Quill Theme 2&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Finally, the community deserves a great thank you for all of your contributions and support! All the &lt;a href=&quot;https://github.com/quilljs/quill/labels/bug&quot;&gt;bug reports&lt;/a&gt;, &lt;a href=&quot;https://github.com/quilljs/quill/labels/feature&quot;&gt;features suggestions&lt;/a&gt; and &lt;a href=&quot;https://github.com/quilljs/quill/pulls?q=is%3Apr&quot;&gt;pull requests&lt;/a&gt; make Quill what it is today. Keep these coming! Exciting times are ahead for web editing and for Quill.&lt;/p&gt;</content><author><name></name></author><summary type="html">Quill launched with the ambitious goal of becoming the rich text editor for the web, being both easy to use for drop in use cases, and powerful enough for complex ones. Its current API is core to those goals.</summary></entry><entry><title type="html">Quill v0.19 - No More Iframes</title><link href="https://quilljs.com/blog/quill-v0-19-no-more-iframes/" rel="alternate" type="text/html" title="Quill v0.19 - No More Iframes" /><published>2014-11-06T00:00:00-08:00</published><updated>2014-11-06T00:00:00-08:00</updated><id>https://quilljs.com/blog/quill-v0-19-no-more-iframes</id><content type="html" xml:base="https://quilljs.com/blog/quill-v0-19-no-more-iframes/">&lt;p&gt;Customizability is core to Quill’s ethos and the new &lt;a href=&quot;https://github.com/quilljs/quill/releases/tag/v0.19.0&quot;&gt;v0.19 release&lt;/a&gt; is a big step towards fulfilling that mission. In previous versions Quill utilized an iframe to contain the editor. This unfortunately prevented expected browser behaviors and made it difficult for developers to access and extend Quill&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Its removal is the biggest change in v0.19 and some rippling effects are expected. They, and other changes for v0.19, are summarized here.&lt;/p&gt;
+
+&lt;h3 id=&quot;styles&quot;&gt;Styles&lt;/h3&gt;
+
+&lt;p&gt;With iframes gone it is now much easier to customize the styling of the Quill editor and unecessary for Quill to do so on your behalf in most cases. This leads to a few changes:&lt;/p&gt;
+
+&lt;p&gt;You can now pass &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; into the &lt;a href=&quot;/docs/configuration/#styles&quot;&gt;style config&lt;/a&gt; to prevent Quill from injecting any &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tags. No change is necessary if the default behavior is preferred, but this added option makes it easier and more efficient for those that prefer to completely control styling with stylesheets. For this latter route, &lt;code class=&quot;highlighter-rouge&quot;&gt;quill.base.css&lt;/code&gt; is now included in releases and the CDN.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Since adding and customizing styles is no longer inaccessible, the &lt;code class=&quot;highlighter-rouge&quot;&gt;addStyles&lt;/code&gt; helper is no longer particularly useful and has been removed.&lt;/p&gt;
+
+&lt;p&gt;All Quill containers’ class names have changed to be prefixed with &lt;code class=&quot;highlighter-rouge&quot;&gt;ql-&lt;/code&gt;. If your application was using these names in any way they will need to be updated.&lt;/p&gt;
+
+&lt;p&gt;Quill is also no longer “protected” from external styles so it should be treated with the same caution as any other front end library. In particular, avoiding overly general css rules will help ensure a peaceful coexistence.&lt;/p&gt;
+
+&lt;h3 id=&quot;scripts&quot;&gt;Scripts&lt;/h3&gt;
+
+&lt;p&gt;It was always possible to access and manipulate Quill’s editor, but without an iframe the task is now easy. While this greatly simplifies custom enhancements it also makes it easier to inadvertently interfere with Quill’s necessary operations. But with modern developer tools and practices, the risks can be mitigated and ultimately the benefits of customization is worthwhile.&lt;/p&gt;
+
+&lt;p&gt;This is a good time to reiterate good bug reporting practices, not just for Quill but for all open source projects. Reducing bugs into the simplest case and providing repeatable reproduction instructions will help isolate the source of issues.&lt;/p&gt;
+
+&lt;h3 id=&quot;default-theme&quot;&gt;Default Theme&lt;/h3&gt;
+
+&lt;p&gt;The default theme in Quill has been renamed from &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;base&lt;/code&gt;. No change should be necessary unless the &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; theme was explicitly being included in the &lt;a href=&quot;/docs/configuration/#theme&quot;&gt;theme config&lt;/a&gt; in which case it should be changed to &lt;code class=&quot;highlighter-rouge&quot;&gt;base&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;npm&quot;&gt;NPM&lt;/h3&gt;
+
+&lt;p&gt;Quill is now listed in npm as &lt;code class=&quot;highlighter-rouge&quot;&gt;quill&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;quilljs&lt;/code&gt;. Quill was already listed as &lt;code class=&quot;highlighter-rouge&quot;&gt;quill&lt;/code&gt; on bower so its name will now be consistent across package managers.&lt;/p&gt;
+
+&lt;h3 id=&quot;contributing&quot;&gt;Contributing&lt;/h3&gt;
+
+&lt;p&gt;Finally, community contribution and involvement has been tremendous and both the project and everyone using it reaps the benefits. A big thanks for all the contributions so far and keep them coming!&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;See &lt;a href=&quot;https://www.jasonchen.me/editors-and-iframes/&quot;&gt;Editors and Iframes&lt;/a&gt; for full details. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Customizability is core to Quill’s ethos and the new v0.19 release is a big step towards fulfilling that mission. In previous versions Quill utilized an iframe to contain the editor. This unfortunately prevented expected browser behaviors and made it difficult for developers to access and extend Quill1. Its removal is the biggest change in v0.19 and some rippling effects are expected. They, and other changes for v0.19, are summarized here. See Editors and Iframes for full details. &amp;#8617;</summary></entry><entry><title type="html">Upgrading to Rich Text Deltas</title><link href="https://quilljs.com/blog/upgrading-to-rich-text-deltas/" rel="alternate" type="text/html" title="Upgrading to Rich Text Deltas" /><published>2014-10-19T00:00:00-07:00</published><updated>2014-10-19T00:00:00-07:00</updated><id>https://quilljs.com/blog/upgrading-to-rich-text-deltas</id><content type="html" xml:base="https://quilljs.com/blog/upgrading-to-rich-text-deltas/">&lt;p&gt;The new rich text type is now live and being used in Quill v0.18.0. It is a big step towards 1.0 and will be the way documents and changes are represented going forward. In most cases this update is non-disruptive and an upgrade can be a simple increment of the version number&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, if you happened to be storing the old Delta format, here’s a short guide on how to migrate.&lt;/p&gt;
+
+&lt;p&gt;The main relevant differences between the old and new Deltas are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Explicit deletes - We need to go through the old Delta, find the implied deletes and insert explicit delete operations into the new Delta&lt;/li&gt;
+  &lt;li&gt;Support for embeds - If we see the hacky representation of embeds, replace with the new representation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- more --&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;richText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'rich-text'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newDelta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;richText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Delta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;changeLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;oldDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Insert operation&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'!'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attributes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// Found the old hacky representation for an embed&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// Quill only supports images so far so we can be confident this is an image&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// which is represented by 1&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;newDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;newDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;changeLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Retain operation&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// Delete operation was implied by the current retain operation&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;newDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;changeLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Now handle or retain operation&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;newDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;retain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'You have a misformed delta'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Handle implied deletes at the end of the document&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oldDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;endLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oldDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;startLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;changeLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oldDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;startLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;changeLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oldDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;endLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;newDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you cannot use the rich-text module or if you are using this as a general guide for another language, the following might be helpful in crafting insert, delete and retain operations.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nweDelta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;oldDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Following a similar logic to the earlier snippet&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// except replacing .insert(), .retain(), .delete() with:&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// insertOp(newDelta.ops, value, formats)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// retainOp(newDelta.ops, length, formats)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// deleteOp(newDelta.ops, length)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;insertOp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;opsArr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;formats&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;formats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attributes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;opsArr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;deleteOp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;opsArr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;opsArr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;retainOp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;opsArr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;retain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;formats&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;formats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attributes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;opsArr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;op&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There are some optimizations performed by rich-text such as excluding no-ops (delete 0 characters) and merging two adjacent operations of the same type (insert ‘A’ followed by insert ‘B’ is merged to be a single insert ‘AB’ operation). But you should not have to worry about these cases since the old Delta format had similar optimizations.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;All it took to upgrade the examples on quilljs.com was: &lt;a href=&quot;https://github.com/quilljs/quill/commit/2580c2a5d440622d226fbef407df7a5a5e9dcf61&quot;&gt;2580c2&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">The new rich text type is now live and being used in Quill v0.18.0. It is a big step towards 1.0 and will be the way documents and changes are represented going forward. In most cases this update is non-disruptive and an upgrade can be a simple increment of the version number1. All it took to upgrade the examples on quilljs.com was: 2580c2 &amp;#8617;</summary></entry><entry><title type="html">A New Delta</title><link href="https://quilljs.com/blog/a-new-delta/" rel="alternate" type="text/html" title="A New Delta" /><published>2014-09-29T00:00:00-07:00</published><updated>2014-09-29T00:00:00-07:00</updated><id>https://quilljs.com/blog/a-new-delta</id><content type="html" xml:base="https://quilljs.com/blog/a-new-delta/">&lt;p&gt;Part of providing a complete API in Quill is providing events for when and what changes occur in the editor. Those changes are currently represented by a &lt;a href=&quot;/guides/working-with-deltas/&quot;&gt;Delta&lt;/a&gt; object, which aims to be intuitive, human-readable, and expressive for any change or document that might need to represented. Over the past few weeks I’ve been working on a new format that better fulfills those goals and addresses the challenges in the current format.&lt;/p&gt;
+
+&lt;p&gt;Documentation for the new Delta format can be found in its own &lt;a href=&quot;https://github.com/ottypes/rich-text&quot;&gt;Github repository&lt;/a&gt; but I will go over some of the rationale behind some of the changes in this post.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;reduced-complexity&quot;&gt;Reduced Complexity&lt;/h3&gt;
+
+&lt;p&gt;When the Delta format was originally designed, it had ambitious goals of being general purpose and being able to represent any kind of document. The new format reduces the scope to just rich text documents, allowing for a much tighter implementation&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Quill is not specifically built to be a collaborative editor but the ability to be used as one is a good benchmark of the API. The new Delta format maintains this capability and fulfills the specifications of an &lt;a href=&quot;https://github.com/ottypes/docs&quot;&gt;ottype&lt;/a&gt;, making it compatible with &lt;a href=&quot;https://github.com/share/ShareJS&quot;&gt;ShareJS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;explicit-deletes&quot;&gt;Explicit Deletes&lt;/h3&gt;
+
+&lt;p&gt;In the current Delta format, a delete operation is implied by a lack of a retain operation. Basically everything is deleted unless you say it should be kept. This has some nice properties from an implementation perspective&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; but was probably the largest source of confusion for users trying to work with Deltas and challenged the human-readability goal. It is very difficult to keep track of indexes to figure out what was not accounted for, to figure out what should be deleted.&lt;/p&gt;
+
+&lt;p&gt;The new format has an explicit delete operation and by default everything is kept. Here’s a comparison of the two formats both representing removing the ‘b’ in ‘abc’.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oldFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;startLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;endLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;retain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A side effect of having explicit deletes and defaulting to keeping text is that in practice the representation for new Deltas will usually be smaller.&lt;/p&gt;
+
+&lt;h3 id=&quot;embed-support&quot;&gt;Embed Support&lt;/h3&gt;
+
+&lt;p&gt;The new Delta format provides native support for embeds, which can be used to represent images, video, etc. There is no support for this in the current format and implementation is hackily achieved by representing an ‘!’ with a image key in the attributes (which will break when video support is added).&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oldFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;startLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;endLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://octodex.github.com/images/labtocat.png'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://octodex.github.com/images/labtocat.png'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;going-forward&quot;&gt;Going Forward&lt;/h3&gt;
+
+&lt;p&gt;This new format will be the finalized representation for changes and state in Quill going forward and is one of the major steps toward a 1.0 release (a topic for another post).&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Currently 28658 vs 9507 lines of code (though in practice is less relevant due to minification and gzip). &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Minimizes number of operations to support, and easy to calculate the length of text of the resulting document which is useful for sanity checks. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Part of providing a complete API in Quill is providing events for when and what changes occur in the editor. Those changes are currently represented by a Delta object, which aims to be intuitive, human-readable, and expressive for any change or document that might need to represented. Over the past few weeks I’ve been working on a new format that better fulfills those goals and addresses the challenges in the current format.</summary></entry><entry><title type="html">Building A Custom Module</title><link href="https://quilljs.com/blog/building-a-custom-module/" rel="alternate" type="text/html" title="Building A Custom Module" /><published>2014-08-14T00:00:00-07:00</published><updated>2014-08-14T00:00:00-07:00</updated><id>https://quilljs.com/blog/building-a-custom-module</id><content type="html" xml:base="https://quilljs.com/blog/building-a-custom-module/">&lt;p&gt;&lt;em&gt;Note: An updated guide for 1.0 and ES6 is available &lt;a href=&quot;/guides/building-a-custom-module/&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Quill’s core strength as an editor is its rich API and powerful customization capabilities. One of the best ways to customize Quill is with a module. A module is a simple way to augment Quill’s functionality. For the purpose of this guide, we will walk through one way to build a word counter module, a commonly found feature in many word processors.&lt;/p&gt;
+
+&lt;h3 id=&quot;counting-words&quot;&gt;Counting Words&lt;/h3&gt;
+
+&lt;p&gt;At its core a word counter simply counts the number of words in the editor and displays this value in some UI. Thus we need to:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Listen on text changes in Quill.&lt;/li&gt;
+  &lt;li&gt;Count the number of words.&lt;/li&gt;
+  &lt;li&gt;Display this value.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let’s jump straight in with a complete example!&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;div data-height=&quot;406&quot; data-theme-id=&quot;23270&quot; data-slug-hash=&quot;qkniF&quot; data-default-tab=&quot;js&quot; class=&quot;codepen&quot;&gt;&lt;pre&gt;&lt;code&gt;
+// Implement and register module
+Quill.registerModule('counter', function(quill, options) {
+  var container = document.querySelector('#counter');
+  quill.on('text-change', function() {
+    var text = quill.getText();
+    // There are a couple issues with counting
+    // this way but we'll fix this later
+    container.innerHTML = text.split(/\s+/).length;
+  });
+});
+
+// We can now initialize Quill with something like this:
+var quill = new Quill('#editor', {
+  modules: {
+    counter: true
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s all it takes to add a custom module to Quill! A function can be &lt;a href=&quot;/docs/api/#quillregistermodule/&quot;&gt;registered&lt;/a&gt; as a module and it will be passed the corresponding Quill editor object along with any options.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-options&quot;&gt;Using Options&lt;/h3&gt;
+
+&lt;p&gt;Modules are passed an options object that can be used to fine tune the desired behavior. We can use this to accept a selector for the counter container instead of a hard-coded string. Let’s also customize the counter to either count words or characters:&lt;/p&gt;
+
+&lt;div data-height=&quot;466&quot; data-theme-id=&quot;23270&quot; data-slug-hash=&quot;eKIBb&quot; data-default-tab=&quot;js&quot; class=&quot;codepen&quot;&gt;&lt;pre&gt;&lt;code&gt;
+Quill.registerModule('counter', function(quill, options) {
+  var container = document.querySelector(options.container);
+  quill.on('text-change', function() {
+    var text = quill.getText();
+    if (options.unit === 'word') {
+      container.innerHTML = text.split(/\s+/).length + ' words';
+    } else {
+      container.innerHTML = text.length + ' characters';
+    }
+  });
+});
+
+var quill = new Quill('#editor', {
+  modules: {
+    counter: {
+      container: '#counter',
+      unit: 'word'
+    }
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;constructors&quot;&gt;Constructors&lt;/h3&gt;
+
+&lt;p&gt;Since any function can be registered as a Quill module, we could have implemented our counter as a constructor. This allows us to access and utilize the module directly.&lt;/p&gt;
+
+&lt;div data-height=&quot;666&quot; data-theme-id=&quot;23270&quot; data-slug-hash=&quot;zCIur&quot; data-default-tab=&quot;js&quot; class=&quot;codepen&quot;&gt;&lt;pre&gt;&lt;code&gt;
+var Counter = function(quill, options) {
+  this.quill = quill;
+  this.options = options;
+  var container = document.querySelector(options.container);
+  var _this = this;
+  quill.on('text-change', function() {
+    var length = _this.calculate();
+    container.innerHTML = length + ' ' + options.unit + 's';
+  });
+};
+
+Counter.prototype.calculate = function() {
+  var text = this.quill.getText();
+  if (this.options.unit === 'word') {
+    return text.split(/\s+/).length;
+  } else {
+    return text.length;
+  }
+};
+
+Quill.registerModule('counter', Counter);
+
+var quill = new Quill('#editor');
+var counter = quill.addModule('counter', {
+  container: '#counter',
+  unit: 'word'
+});
+
+// We can now access calculate() directly
+console.log(counter.calculate(), 'words');
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;wrapping-it-all-up&quot;&gt;Wrapping It All Up&lt;/h3&gt;
+
+&lt;p&gt;Now let’s polish off the module and fix a few pesky bugs.&lt;/p&gt;
+
+&lt;div data-height=&quot;766&quot; data-theme-id=&quot;23270&quot; data-slug-hash=&quot;wxtvI&quot; data-default-tab=&quot;js&quot; class=&quot;codepen&quot;&gt;&lt;pre&gt;&lt;code&gt;
+var Counter = function(quill, options) {
+  this.quill = quill;
+  this.options = options;
+  this.container = document.querySelector(options.container);
+  quill.on('text-change', this.update.bind(this));
+  this.update();  // Account for initial contents
+};
+
+Counter.prototype.calculate = function() {
+  var text = this.quill.getText();
+  if (this.options.unit === 'word') {
+    text = text.trim();
+    // Splitting empty text returns a non-empty array
+    return text.length &amp;gt; 0 ? text.split(/\s+/).length : 0;
+  } else {
+    return text.length;
+  }
+};
+
+Counter.prototype.update = function() {
+  var length = this.calculate();
+  var label = this.options.unit;
+  if (length !== 1) {
+    label += 's';
+  }
+  this.container.innerHTML = length + ' ' + label;
+}
+
+Quill.registerModule('counter', Counter);
+
+var quill = new Quill('#editor');
+var counter = quill.addModule('counter', {
+  container: '#counter',
+  unit: 'word'
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s all there is to it! Stay tuned for more guides on common types of modules you can build.&lt;/p&gt;
+
+&lt;!-- script --&gt;
+&lt;script src=&quot;//codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- script --&gt;</content><author><name></name></author><summary type="html">Note: An updated guide for 1.0 and ES6 is available here.</summary></entry><entry><title type="html">An Offical CDN for Quill</title><link href="https://quilljs.com/blog/an-official-cdn-for-quill/" rel="alternate" type="text/html" title="An Offical CDN for Quill" /><published>2014-08-12T00:00:00-07:00</published><updated>2014-08-12T00:00:00-07:00</updated><id>https://quilljs.com/blog/an-official-cdn-for-quill</id><content type="html" xml:base="https://quilljs.com/blog/an-official-cdn-for-quill/">&lt;p&gt;Quill now has an offical Content Distribution Network so you can have access to a reliable, high-speed host for the library. To include a file:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdn.quilljs.com/0.16.0/quill.snow.css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdn.quilljs.com/0.16.0/quill.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can also use “latest” as the version:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdn.quilljs.com/latest/quill.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Quill now has an offical Content Distribution Network so you can have access to a reliable, high-speed host for the library. To include a file:</summary></entry></feed>

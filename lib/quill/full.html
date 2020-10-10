@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Full Editor - Quill Rich Text Editor</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="language" content="english">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta name="description"
+          content="Quill is a free, open source WYSIWYG editor built for the modern web. Completely customize it for any need with its modular architecture and expressive API.">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@quilljs">
+
+    <meta name="twitter:title" content="Full Editor - Quill">
+
+    <meta name="twitter:description" content="Quill is a free, open source rich text editor built for the modern web.">
+    <meta name="twitter:image" content="https://quilljs.com/assets/images/brand-asset.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quilljs.com/standalone/full/">
+    <meta property="og:image" content="https://quilljs.com/assets/images/brand-asset.png">
+    <meta property="og:title" content="Full Editor - Quill">
+    <meta property="og:site_name" content="Quill">
+
+    <link rel="canonical" href="https://quilljs.com/standalone/full/">
+    <link type="application/atom+xml" rel="alternate" href="feed.xml" title="Quill - Your powerful rich text editor"/>
+
+
+    <link rel="stylesheet" href="katex.min.css"/>
+
+    <link rel="stylesheet" href="monokai-sublime.min.css"/>
+
+    <link rel="stylesheet" href="quill.snow.css"/>
+
+    <style>
+        body > #standalone-container {
+            margin: 0 auto;
+        }
+
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        #editor-container {
+<!--        position: absolute;-->
+<!--         bottom: 56px;-->
+         width: 100%;
+        }
+
+        #toolbar-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button {
+            height: 28px;
+            padding: 2px;
+            margin: 3px 5px;
+            width: 32px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<div id="standalone-container">
+    <div id="editor-container"></div>
+    <div id="toolbar-container" style="height:56px;">
+        <!--    <span class="ql-formats">-->
+        <!--      <select class="ql-font"></select>-->
+        <!--      <select class="ql-size"></select>-->
+        <!--    </span>-->
+        <!--        <span class="ql-formats">-->
+        <!--    </span>-->
+        <!--    <span class="ql-formats">-->
+        <!--      <select class="ql-color"></select>-->
+        <!--      <select class="ql-background"></select>-->
+        <!--    </span>-->
+        <!--    <span class="ql-formats">-->
+        <!--      <button class="ql-script" value="sub"></button>-->
+        <!--      <button class="ql-script" value="super"></button>-->
+        <!--    </span>-->
+        <!--        <span class="ql-formats">-->
+        <button class="ql-header" value="1"></button>
+        <button class="ql-header" value="2"></button>
+        <button class="ql-blockquote"></button>
+        <button class="ql-code-block"></button>
+        <button class="ql-bold"></button>
+        <button id="imageButton">image</button>
+        <button class="ql-image"></button>
+<!--        <button class="ql-underline"></button>-->
+<!--        <button class="ql-strike"></button>-->
+<!--        <button id="custom-button"></button>-->
+        <button id="keyBoard">keyBoard</button>
+        <!--    </span>-->
+        <!--        <span class="ql-formats">-->
+        <!--      <button class="ql-list" value="ordered"></button>-->
+        <!--      <button class="ql-list" value="bullet"></button>-->
+        <!--            &lt;!&ndash;      <button class="ql-indent" value="-1"></button>&ndash;&gt;-->
+        <!--            &lt;!&ndash;      <button class="ql-indent" value="+1"></button>&ndash;&gt;-->
+        <!--    </span>-->
+        <!--        &lt;!&ndash;    <span class="ql-formats">&ndash;&gt;-->
+        <!--        &lt;!&ndash;      <button class="ql-direction" value="rtl"></button>&ndash;&gt;-->
+        <!--        &lt;!&ndash;    </span>&ndash;&gt;-->
+        <!--        <span class="ql-formats">-->
+        <!--      <button class="ql-link"></button>-->
+<!--              <button class="ql-image"></button>-->
+        <!--      <select class="ql-align"></select>-->
+        <!--            &lt;!&ndash;      <button class="ql-video"></button>&ndash;&gt;-->
+        <!--            &lt;!&ndash;      <button class="ql-formula"></button>&ndash;&gt;-->
+        <!--    </span>-->
+        <!--    <span class="ql-formats">-->
+        <!--      <button class="ql-clean"></button>-->
+        <!--    </span>-->
+    </div>
+</div>
+
+
+<script src="katex.min.js"></script>
+
+<script src="highlight.min.js"></script>
+
+<script src="quill.min.js"></script>
+
+<script src="jquery.js"></script>
+
+<script>
+    var windowHeight = $(window).height();
+    var J_NavContent = document.getElementById("editor-container");
+    var toolBar = document.getElementById("toolbar-container");
+    var keyBord = document.getElementById("keyBoard");
+    var keyImage = document.getElementById("imageButton");
+    var customButton = document.getElementsByClassName('ql-bold');
+    var quill = new Quill('#editor-container', {
+        modules: {
+            formula: true,
+            syntax: true,
+            toolbar: '#toolbar-container'
+        },
+        placeholder: 'start',
+        theme: 'snow'
+    });
+    quill.focus();
+    let offsetTop = document.getElementById("toolbar-container").offsetTop;
+    J_NavContent.style.height = offsetTop + 'px';
+    quill.on('selection-change', range => {
+        if (!range) {
+            setTimeout(function () {
+                J_NavContent.style.height = windowHeight - 56 + 'px';
+            }, 100);
+        } else {
+            setTimeout(function () {
+                let offsetTop = document.getElementById("toolbar-container").offsetTop;
+                  J_NavContent.style.height = offsetTop + 'px';
+            }, 200);
+        }
+    })
+    
+    keyBord.addEventListener('click', event=>
+       quill.blur())
+    // keyImage.onclick = function(a){
+
+    //     alert("这是第一种点击方式"+a)sxxx
+    // }
+    J_NavContent.addEventListener('click',function () {
+        quill.focus();
+    })
+    keyImage.addEventListener('click', event=>{
+             window.open('image://' , '_blank');
+    quill.blur();
+    });
+
+</script>
+
+
+</body>
+</html>

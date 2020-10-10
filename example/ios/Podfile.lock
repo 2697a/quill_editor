@@ -1,0 +1,41 @@
+PODS:
+  - Flutter (1.0.0)
+  - keyboard_visibility (0.5.0):
+    - Flutter
+    - Reachability
+  - quill_editor (0.0.1):
+    - Flutter
+  - Reachability (3.2)
+  - webview_flutter (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - keyboard_visibility (from `.symlinks/plugins/keyboard_visibility/ios`)
+  - quill_editor (from `.symlinks/plugins/quill_editor/ios`)
+  - webview_flutter (from `.symlinks/plugins/webview_flutter/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Reachability
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  keyboard_visibility:
+    :path: ".symlinks/plugins/keyboard_visibility/ios"
+  quill_editor:
+    :path: ".symlinks/plugins/quill_editor/ios"
+  webview_flutter:
+    :path: ".symlinks/plugins/webview_flutter/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  keyboard_visibility: 96a24de806fe6823c3ad956c01ba2ec6d056616f
+  quill_editor: f32643e6767fddf3b0fadea40db744ef08d4932b
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  webview_flutter: d2b4d6c66968ad042ad94cbb791f5b72b4678a96
+
+PODFILE CHECKSUM: f32fb4e7c14f8b3ca19a369d7be425dd9241af27
+
+COCOAPODS: 1.8.4
